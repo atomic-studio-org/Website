@@ -26,14 +26,14 @@ export const FloatingNav = ({
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (!(typeof current === "number")) {
-      return
+      return;
     }
 
     if (window.pageYOffset > window.innerHeight) {
-      setTransparent(false)
-      return
+      setTransparent(false);
+      return;
     }
-    setTransparent(true)
+    setTransparent(true);
   });
 
   return (
@@ -53,15 +53,21 @@ export const FloatingNav = ({
         className={cn(
           "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full bg-purple-700 text-white z-[5000] pr-2 pl-8 p-2 items-center justify-center space-x-4 transition-all duration-300",
           className,
-	  (transparent ? "bg-transparent" : "shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]")
+          transparent
+            ? "bg-transparent"
+            : "shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]",
         )}
       >
         {navItems.map((navItem: any, idx: number) => (
           <button
             key={`link=${idx}`}
-	    onClick={() => document.querySelector(`#${navItem.link}`).scrollIntoView({behavior: "smooth"})}
+            onClick={() =>
+              document
+                .querySelector(`#${navItem.link}`)
+                .scrollIntoView({ behavior: "smooth" })
+            }
             className={cn(
-              "relative items-center flex space-x-1 text-white hover:text-violet-400 p-3 transition duration-300"
+              "relative items-center flex space-x-1 text-white hover:text-violet-400 p-3 transition duration-300",
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
@@ -72,4 +78,3 @@ export const FloatingNav = ({
     </AnimatePresence>
   );
 };
-

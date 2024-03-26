@@ -1,4 +1,4 @@
-name: Commit Check 
+name: Commit Check
 on:
   push:
   pull_request:

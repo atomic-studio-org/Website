@@ -115,11 +115,7 @@
     },
     "gitignore": {
       "inputs": {
-        "nixpkgs": [
-          "utility-flake",
-          "nix-pre-commit-hooks",
-          "nixpkgs"
-        ]
+        "nixpkgs": ["utility-flake", "nix-pre-commit-hooks", "nixpkgs"]
       },
       "locked": {
         "lastModified": 1709087332,
@@ -238,11 +234,7 @@
     "rust-overlay": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": [
-          "utility-flake",
-          "bluebuild",
-          "nixpkgs"
-        ]
+        "nixpkgs": ["utility-flake", "bluebuild", "nixpkgs"]
       },
       "locked": {
         "lastModified": 1709086241,

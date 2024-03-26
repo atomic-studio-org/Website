@@ -30,7 +30,9 @@
       });
 
       devShells = forEachSupportedSystem ({ pkgs }: {
-        inherit (utility-flake.devShells.${pkgs.system}) default;
+        default = pkgs.mkShell {
+          packages = utility-flake.lib.${pkgs.system}.devShellPackages ++ (with pkgs.nodePackages; [ prettier eslint ]);
+        };
       });
     };
 }

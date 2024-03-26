@@ -3,7 +3,9 @@
 This is a website made for talking about Atomic Studio and what it is all about, it is still in a VERY WIP stage, so expect a LOT of changes with time!
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
 ## Getting Started
+
 First, run the development server:
 
 ```bash

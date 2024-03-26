@@ -53,7 +53,7 @@ const config: Config = {
           "100%": {
             transform: "translateY(-50%)",
           },
-	},
+        },
       },
     },
   },
